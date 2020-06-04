@@ -90,14 +90,15 @@ class ImpersonateController extends ActionController
      * Fetching possible redirect options for the given action method and if everything is set we redirect to the
      * configured controller action.
      *
-     * @param string $action
+     * @param string $actionName
      * @return void
      */
-    protected function redirectIfPossible($action)
+    protected function redirectIfPossible($actionName)
     {
-        $action = $this->settings['redirectOptions'][$action]['action'] ?? '';
-        $controller = $this->settings['redirectOptions'][$action]['controller'] ?? '';
-        $package = $this->settings['redirectOptions'][$action]['package'] ?? '';
+        $action = $this->settings['redirectOptions'][$actionName]['action'] ?? '';
+        $controller = $this->settings['redirectOptions'][$actionName]['controller'] ?? '';
+        $package = $this->settings['redirectOptions'][$actionName]['package'] ?? '';
+
         if ($action !== '' && $controller !== '' && $package !== '') {
             $this->redirectWithParentRequest($action, $controller, $package);
         }
