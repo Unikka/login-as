@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/unikka/login-as/compare/v1.0.0...v1.0.1) (2020-06-04)
+
+
+### Fix
+
+* Redirect to configured action ([b96c86b](https://github.com/unikka/login-as/commit/b96c86bf46d4ad6f263810c8b585eac8ac132fde))
+
 # 1.0.0 (2020-06-04)
 
 
