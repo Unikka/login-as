@@ -14,7 +14,6 @@ jobs:
           key: 'neos-login-as-v1-{{ checksum "yarn.lock" }}'
           paths:
             - ./node_modules
-      - run: yarn build:production
       - run: npm run semantic-release
 
 workflows:
