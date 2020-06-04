@@ -1,0 +1,26 @@
+#                                                                        #
+# Extend Security policy                                                 #
+#                                                                        #
+
+privilegeTargets:
+
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+
+    'Unikka.LoginAs:Impersonate':
+      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->impersonateAction())'
+
+    'Unikka.LoginAs:RestoreOriginUser':
+      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->restoreAction())'
+
+
+roles:
+  'Neos.Neos:Administrator':
+    privileges:
+      - privilegeTarget: 'Unikka.LoginAs:Impersonate'
+        permission: GRANT
+
+  'Neos.Flow:AuthenticatedUser':
+    privileges:
+      - privilegeTarget: 'Unikka.LoginAs:RestoreOriginUser'
+        permission: GRANT
+
