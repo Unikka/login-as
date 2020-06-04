@@ -21,9 +21,21 @@ The --no-update command prevents the automatic update of the dependencies. After
 
 ## Configuration
 
+If you want, you can define redirections in case a user is logged in or restored.
+
 ```yaml
 Unikka:
   LoginAs:
+    redirectOptions:
+      restore:
+        action: 'myAction'
+        controller: 'myController'
+        package: 'mypackage'
+      impersonate:
+        action: 'myAction'
+        controller: 'myController'
+        package: 'mypackage'
+```
 
 ## Contribution
 
