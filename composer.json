@@ -1,0 +1,20 @@
+{
+    "description": "Plugin for the Neos CMS that enables users to login with other accounts for support reasons e.g.",
+    "type": "neos-plugin",
+    "name": "unikka/login-as",
+    "license": "MIT",
+    "require": {
+        "neos/flow": "*",
+        "neos/neos": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unikka\\LoginAs\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Unikka.LoginAs"
+        }
+    }
+}

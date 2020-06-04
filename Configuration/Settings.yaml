@@ -1,0 +1,11 @@
+Unikka:
+  LoginAs:
+    redirectOptions:
+      undo:
+        action: ''
+        controller: ''
+        package: ''
+      impersonate:
+        action: ''
+        controller: ''
+        package: ''

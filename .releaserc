@@ -1,0 +1,34 @@
+{
+    "branch": "release",
+    "analyzeCommits": {
+        "preset": "eslint",
+        "releaseRules": [
+            {"tag": "Upgrade", "release": "patch"}
+        ]
+    },
+    "verifyConditions": [
+        {
+            "path": "@semantic-release/changelog",
+            "changelogFile": "CHANGELOG.md",
+            "changelogTitle": "Changelog Unikka/LoginAs"
+        },
+        "@semantic-release/github"
+    ],
+    "prepare": [
+        "@semantic-release/changelog",
+        "@semantic-release/npm",
+        {
+            "path": "@semantic-release/git",
+            "assets": ["package.json", "Resources/Public", "CHANGELOG.md"],
+            "message": "Build: Release ${nextRelease.version} [skip ci]"
+        }
+    ],
+    "generateNotes": {
+      "preset": "eslint",
+      "writerOpts": {
+        "commitsSort": ["subject", "scope"],
+      }
+    },
+    "publish": ["@semantic-release/github"]
+}
+
