@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/unikka/login-as/compare/v1.0.1...v1.0.2) (2020-08-05)
+
+
+### Fix
+
+* Prevent redirect when still in impersonate mode ([407fbbe](https://github.com/unikka/login-as/commit/407fbbecb3efdef9a152112b32be79b056feaa43))
+
 ## [1.0.1](https://github.com/unikka/login-as/compare/v1.0.0...v1.0.1) (2020-06-04)
 
 
