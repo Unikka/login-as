@@ -65,10 +65,9 @@ class ImpersonateService
 
     public function restoreOriginalIdentity(): void
     {
-        $this->session->putData('Impersonate', null);
-
         $account = $this->getOriginalIdentity();
         $this->refreshTokens($account);
+        $this->session->putData('Impersonate', null);
     }
 
     public function getImpersonation(): ?Account

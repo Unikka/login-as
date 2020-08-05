@@ -99,7 +99,7 @@ class ImpersonateController extends ActionController
         $controller = $this->settings['redirectOptions'][$actionName]['controller'] ?? '';
         $package = $this->settings['redirectOptions'][$actionName]['package'] ?? '';
 
-        if ($action !== '' && $controller !== '' && $package !== '') {
+        if ($action !== '' && $controller !== '' && $package !== '' && $this->impersonateService->getImpersonation() === null) {
             $this->redirectWithParentRequest($action, $controller, $package);
         }
     }
