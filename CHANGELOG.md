@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/unikka/login-as/compare/v1.0.2...v1.1.0) (2020-10-28)
+
+
+### New
+
+* Ignore some file on export ([d197af6](https://github.com/unikka/login-as/commit/d197af6a71315103a92d043e269bf55917867e57))
+
 ## [1.0.2](https://github.com/unikka/login-as/compare/v1.0.1...v1.0.2) (2020-08-05)
 
 
