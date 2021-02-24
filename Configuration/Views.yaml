@@ -1,0 +1,5 @@
+-
+  requestFilter: 'parentRequest.isPackage("Neos.Neos") && isFormat("html")'
+  options:
+    layoutRootPaths:
+      'Neos.Neos': 'resource://Unikka.LoginAs/Private/Layouts'
