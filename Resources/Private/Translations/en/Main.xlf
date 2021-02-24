@@ -8,6 +8,9 @@
             <trans-unit id="error.impersonateUser" xml:space="preserve" approved="yes">
                 <source>Could not switch to the selected user.</source>
             </trans-unit>
+            <trans-unit id="tooltip.impersonateUserButton" xml:space="preserve" approved="yes">
+                <source>Login as user</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

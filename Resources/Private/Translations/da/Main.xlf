@@ -10,6 +10,10 @@
                 <source>Could not switch to the selected user.</source>
                 <target>Kunne ikke skifte til den valgte bruger.</target>
             </trans-unit>
+            <trans-unit id="tooltip.impersonateUserButton" xml:space="preserve" approved="yes">
+                <source>Login as this user</source>
+                <target>Log ind som denne bruger</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
