@@ -1,0 +1,33 @@
+#                                                              #
+# route configuration for the Unikka.LoginAs package           #
+#                                                              #
+
+-
+  name: 'Impersonate User'
+  uriPattern: 'neos/impersonate/user-change'
+  defaults:
+    '@package': 'Unikka.LoginAs'
+    '@controller': 'Impersonate'
+    '@action': 'impersonateUserWithResponse'
+    '@format': 'json'
+  httpMethods: ['POST']
+
+-
+  name: 'Impersonate User restore admin'
+  uriPattern: 'neos/impersonate/restore'
+  defaults:
+    '@package': 'Unikka.LoginAs'
+    '@controller': 'Impersonate'
+    '@action': 'restore'
+    '@format': 'json'
+  httpMethods: ['POST']
+
+-
+  name: 'Impersonate User status'
+  uriPattern: 'neos/impersonate/status'
+  defaults:
+    '@package': 'Unikka.LoginAs'
+    '@controller': 'Impersonate'
+    '@action': 'status'
+    '@format': 'json'
+  httpMethods: ['GET']

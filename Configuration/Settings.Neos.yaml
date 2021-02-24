@@ -5,3 +5,16 @@ Neos:
         autoInclude:
           'Unikka.LoginAs':
           - 'Main'
+  Flow:
+    mvc:
+      routes:
+        'Unikka.LoginAs': true
+    security:
+      authentication:
+        providers:
+          'Neos.Neos:Backend':
+            requestPatterns:
+              'Unikka.LoginAs:Controllers':
+                pattern: ControllerObjectName
+                patternOptions:
+                  controllerObjectNamePattern: 'Unikka\LoginAs\Controller\.*'

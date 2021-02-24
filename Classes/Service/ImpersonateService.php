@@ -56,7 +56,8 @@ class ImpersonateService
      */
     public function impersonate($account): void
     {
-        $this->session->putData('OriginalIdentity', $this->persistenceManager->getIdentifierByObject($this->securityContext->getAccount()));
+        $currentAccount = $this->securityContext->getAccount();
+        $this->session->putData('OriginalIdentity', $this->persistenceManager->getIdentifierByObject($currentAccount));
 
         $this->refreshTokens($account);
 

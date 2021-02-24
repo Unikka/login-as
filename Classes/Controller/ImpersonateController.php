@@ -18,8 +18,8 @@ use Neos\Flow\Mvc\Routing\UriBuilder;
 use Neos\Flow\Mvc\View\JsonView;
 use Neos\Flow\Security\Account;
 use Neos\Neos\Domain\Model\User;
-use Unikka\LoginAs\Service\ImpersonateService;
 use Neos\Party\Domain\Service\PartyService;
+use Unikka\LoginAs\Service\ImpersonateService;
 
 /**
  * The Impersonate controller
@@ -43,17 +43,49 @@ class ImpersonateController extends ActionController
     /**
      * @var string
      */
-    protected $defaultViewImplementation = JsonView::class;
-
-    /**
-     * @var JsonView
-     */
-    protected $view = null;
+    protected $defaultViewObjectName = JsonView::class;
 
     /**
      * @var array
      */
-    protected $supportedMediaTypes = ['application/json'];
+    protected $viewFormatToObjectNameMap = [
+        'json' => JsonView::class
+    ];
+
+    /**
+     * @var array
+     */
+    protected $supportedMediaTypes = [
+        'application/json'
+    ];
+
+    /**
+     * @param Account $account
+     * @return void
+     */
+    public function impersonateAction(Account $account)
+    {
+        $this->impersonateService->impersonate($account);
+        $this->redirectIfPossible('impersonate');
+    }
+
+    /**
+     * Fetching possible redirect options for the given action method and if everything is set we redirect to the
+     * configured controller action.
+     *
+     * @param string $actionName
+     * @return void
+     */
+    protected function redirectIfPossible($actionName)
+    {
+        $action = $this->settings['redirectOptions'][$actionName]['action'] ?? '';
+        $controller = $this->settings['redirectOptions'][$actionName]['controller'] ?? '';
+        $package = $this->settings['redirectOptions'][$actionName]['package'] ?? '';
+
+        if ($action !== '' && $controller !== '' && $package !== '' && $this->impersonateService->getImpersonation() === null) {
+            $this->redirectWithParentRequest($action, $controller, $package);
+        }
+    }
 
     /**
      * @param string $actionName Name of the action to forward to
@@ -87,31 +119,53 @@ class ImpersonateController extends ActionController
     }
 
     /**
-     * Fetching possible redirect options for the given action method and if everything is set we redirect to the
-     * configured controller action.
-     *
-     * @param string $actionName
-     * @return void
+     * @param Account $account
+     * @return string
      */
-    protected function redirectIfPossible($actionName)
+    public function impersonateWithResponseAction(Account $account)
     {
-        $action = $this->settings['redirectOptions'][$actionName]['action'] ?? '';
-        $controller = $this->settings['redirectOptions'][$actionName]['controller'] ?? '';
-        $package = $this->settings['redirectOptions'][$actionName]['package'] ?? '';
-
-        if ($action !== '' && $controller !== '' && $package !== '' && $this->impersonateService->getImpersonation() === null) {
-            $this->redirectWithParentRequest($action, $controller, $package);
-        }
+        $this->impersonateService->impersonate($account);
+        $impersonateStatus = $this->getStatus();
+        return json_encode($impersonateStatus);
     }
 
     /**
-     * @param Account $account
-     * @return void
+     * @return array
      */
-    public function impersonateAction(Account $account)
+    protected function getStatus()
     {
+        $impersonateStatus = [
+            'status' => false
+        ];
+
+        if ($this->impersonateService->isActive()) {
+            $this->response = $this->response->withStatus(200);
+
+            $currentImpersonation = $this->impersonateService->getImpersonation();
+            /** @var User $user */
+            $user = $this->partyService->getAssignedPartyOfAccount($currentImpersonation);
+
+            $impersonateStatus['status'] = true;
+            $impersonateStatus['user'] = [
+                'accountIdentifier' => $currentImpersonation->getAccountIdentifier(),
+                'fullName' => $user->getName()->getFullName()
+            ];
+        }
+
+        return $impersonateStatus;
+    }
+
+    /**
+     * @param User $user
+     * @return string
+     */
+    public function impersonateUserWithResponseAction(User $user)
+    {
+        /** @var Account $account */
+        $account = $user->getAccounts()->first();
         $this->impersonateService->impersonate($account);
-        $this->redirectIfPossible('impersonate');
+        $impersonateStatus = $this->getStatus();
+        $this->view->assign('value', $impersonateStatus);
     }
 
     /**
@@ -125,26 +179,11 @@ class ImpersonateController extends ActionController
     }
 
     /**
-     * @return void
+     * @return string
      */
     public function statusAction()
     {
-        $this->response = $this->response->withAddedHeader('Content-Type', 'application/json');
-
-        if ($this->impersonateService->isActive()) {
-            $this->response = $this->response->withStatus(200);
-
-            $currrentImpersonation = $this->impersonateService->getImpersonation();
-            /** @var User $user */
-            $user = $this->partyService->getAssignedPartyOfAccount($currrentImpersonation);
-
-            $this->view->setVariablesToRender(['accountIdentifier', 'fullName']);
-
-            $this->view
-                ->assign('accountIdentifier', $currrentImpersonation->getAccountIdentifier())
-                ->assign('fullName', $user->getName()->getFullName());
-        } else {
-            $this->response = $this->response->withStatus(404);
-        }
+        $impersonateStatus = $this->getStatus();
+        $this->view->assign('value', $impersonateStatus);
     }
 }

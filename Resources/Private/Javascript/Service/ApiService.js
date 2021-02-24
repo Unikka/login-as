@@ -5,20 +5,21 @@ export default class ApiService {
         this._csrfToken = _csrfToken;
     }
 
-    async callUserChange(accountIdentifier) {
-        const account = {
-            account:  accountIdentifier
+    async callUserChange(identifier) {
+        const data = {
+            user: identifier,
+            format: 'json'
         };
         const response = await fetch(BASE_PATH + 'user-change', {
             method: 'POST',
             credentials: 'include',
             headers: this._getHeader(),
-            body: JSON.stringify(account)
+            body: JSON.stringify(data)
         });
         return response;
     }
 
-     async callStatus() {
+    async callStatus() {
         const response = await fetch(BASE_PATH + 'status', {
             method: 'GET',
             credentials: 'include',
@@ -29,6 +30,7 @@ export default class ApiService {
 
     _getHeader() {
         return {
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
             'X-Flow-Csrftoken': this._csrfToken,
         };
