@@ -3,11 +3,16 @@
    "version": "1.1.0",
    "repository": "git@github.com:unikka/login-as.git",
    "license": "MIT",
-   "dependencies": {},
+   "dependencies": {
+      "core-js": "^3.8.0",
+      "regenerator-runtime": "^0.13.7"
+   },
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 0",
       "semantic-release": "semantic-release",
-      "commit": "git-cz"
+      "commit": "git-cz",
+      "build": "parcel build Resources/Private/Javascript/Main.js --out-dir Resources/Public/Javascript/",
+      "watch": "parcel watch Resources/Private/Javascript/Main.js --out-dir Resources/Public/Javascript/"
    },
    "devDependencies": {
       "@semantic-release/changelog": "^5.0.1",
@@ -16,6 +21,7 @@
       "commitizen": "^4.1.2",
       "conventional-changelog-eslint": "^3.0.8",
       "cz-adapter-eslint": "^0.3.0",
+      "parcel-bundler": "^1.12.4",
       "semantic-release": "^17.0.8"
    },
    "config": {
