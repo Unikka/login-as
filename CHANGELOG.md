@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/unikka/login-as/compare/v1.2.0...v1.2.1) (2021-02-25)
+
+
+### Fix
+
+* Add missing javascript assets ([52d45dc](https://github.com/unikka/login-as/commit/52d45dcba0d3d5ff4a29723d555cefefba668502))
+
 # [1.2.0](https://github.com/unikka/login-as/compare/v1.1.0...v1.2.0) (2021-02-25)
 
 
