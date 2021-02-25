@@ -14,6 +14,14 @@
                 <source>Login as this user</source>
                 <target>Melden Sie sich als dieser Benutzer an</target>
             </trans-unit>
+            <trans-unit id="error.restoreUser" xml:space="preserve" approved="yes">
+                <source>Could not switch back to the original user.</source>
+                <target>Konnte nicht zum ursprünglichen Benutzer zurückkehren.</target>
+            </trans-unit>
+            <trans-unit id="success.restoreUser" xml:space="preserve" approved="yes">
+                <source>Switched back from {0} to the orginal user {1}.</source>
+                <target>Umloggen von {0} zum ursprünglichen Benutzer {1}.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

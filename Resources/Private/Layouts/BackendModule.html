@@ -1,5 +1,5 @@
 {namespace neos=Neos\Neos\ViewHelpers}
-<div class="neos-content neos-indented neos-fluid-container">
+<div class="neos-content neos-indented neos-fluid-container" data-csrf-Token="{f:security.csrfToken()}">
   <script src="{f:uri.resource(package: 'Unikka.LoginAs', path: 'Javascript/Main.js')}"></script>
 
   <f:render section="subtitle" optional="1" />

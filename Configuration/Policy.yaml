@@ -10,7 +10,7 @@ privilegeTargets:
       matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->(?!initialize).*Action())'
 
     'Unikka.LoginAs:RestoreOriginUser':
-      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->(restore|status)Action())'
+      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->(restore|restoreWithResponse|status)Action())'
 
 
 roles:

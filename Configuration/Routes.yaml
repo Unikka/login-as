@@ -18,7 +18,7 @@
   defaults:
     '@package': 'Unikka.LoginAs'
     '@controller': 'Impersonate'
-    '@action': 'restore'
+    '@action': 'restoreWithResponse'
     '@format': 'json'
   httpMethods: ['POST']
 

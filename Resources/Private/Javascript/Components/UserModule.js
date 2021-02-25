@@ -4,9 +4,9 @@ import {ImpersonateButton} from '../Templates/ImpersonateButton'
 
 export default class UserModule {
     constructor(_root) {
-        const csfrTokenField = _root.querySelector('input[name="__csrfToken"]')
+        const csfrTokenField = document.querySelector('[data-csrf-token]')
         this._root = _root
-        this._csrfToken = !isNil(csfrTokenField) ? csfrTokenField.getAttribute('value') : ''
+        this._csrfToken = !isNil(csfrTokenField) ? csfrTokenField.getAttribute('data-csrf-token') : ''
         this._apiService = new ApiService(this._csrfToken)
 
         if (!isNil(_root)) {

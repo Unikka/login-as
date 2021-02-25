@@ -152,6 +152,36 @@ class ImpersonateController extends ActionController
         $this->redirectIfPossible('restore');
     }
 
+
+    /**
+     * @return void
+     * @throws StopActionException
+     */
+    public function restoreWithResponseAction()
+    {
+        /** @var Account $originalIdentity */
+        $originalIdentity = $this->impersonateService->getOriginalIdentity();
+        /** @var Account $impersonateIdentity */
+        $impersonateIdentity = $this->impersonateService->getImpersonation();
+
+        $response['status'] = false;
+        if ($originalIdentity) {
+            $response['status'] = true;
+            $response['origin'] = [
+                'accountIdentifier' => $originalIdentity->getAccountIdentifier(),
+            ];
+        }
+
+        if ($impersonateIdentity) {
+            $response['impersonate'] = [
+                'accountIdentifier' => $impersonateIdentity->getAccountIdentifier(),
+            ];
+        }
+
+        $this->impersonateService->restoreOriginalIdentity();
+        $this->view->assign('value', $response);
+    }
+
     /**
      * @return string
      */
@@ -172,6 +202,7 @@ class ImpersonateController extends ActionController
 
         if ($this->impersonateService->isActive()) {
             $currentImpersonation = $this->impersonateService->getImpersonation();
+            $originalIdentity = $this->impersonateService->getOriginalIdentity();
             /** @var User $user */
             $user = $this->partyService->getAssignedPartyOfAccount($currentImpersonation);
 
@@ -180,6 +211,15 @@ class ImpersonateController extends ActionController
                 'accountIdentifier' => $currentImpersonation->getAccountIdentifier(),
                 'fullName' => $user->getName()->getFullName()
             ];
+
+            if ($originalIdentity) {
+                /** @var User $originUser */
+                $originUser = $this->partyService->getAssignedPartyOfAccount($originalIdentity);
+                $impersonateStatus['origin'] = [
+                    'accountIdentifier' => $originalIdentity->getAccountIdentifier(),
+                    'fullName' => $originUser->getName()->getFullName()
+                ];
+            }
         }
 
         return $impersonateStatus;

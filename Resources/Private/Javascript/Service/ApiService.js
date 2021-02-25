@@ -30,6 +30,16 @@ export default class ApiService {
         return await response.json()
     }
 
+    async callRestore() {
+        const response = await fetch(BASE_PATH + 'restore', {
+            method: 'POST',
+            credentials: 'include',
+            headers: this._getHeader(),
+        })
+
+        return await response.json()
+    }
+
     _getHeader() {
         return {
             Accept: 'application/json',

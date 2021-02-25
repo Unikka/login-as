@@ -7,13 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const userModuleContainer = document.querySelector(
         '.neos-module-administration-users'
     )
-    Array.from(userModuleContainer.querySelectorAll('.neos-table')).forEach(
-        (_userModule) => {
-            if (!isNil(_userModule)) {
-                new UserModule(_userModule)
+    if (!isNil(userModuleContainer)) {
+        Array.from(userModuleContainer.querySelectorAll('.neos-table')).forEach(
+            (_userModule) => {
+                if (!isNil(_userModule)) {
+                    new UserModule(_userModule)
+                }
             }
-        }
-    )
+        )
+    }
 
     const userMenuContainer = document.querySelector(
         '#neos-top-bar .neos-user-menu'
