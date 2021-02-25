@@ -22,6 +22,7 @@
       "conventional-changelog-eslint": "^3.0.8",
       "cz-adapter-eslint": "^0.3.0",
       "parcel-bundler": "^1.12.4",
+      "prettier": "^2.2.1",
       "semantic-release": "^17.0.8"
    },
    "config": {

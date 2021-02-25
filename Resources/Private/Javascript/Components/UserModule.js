@@ -65,7 +65,7 @@ export default class UserModule {
 
                 // load default backend, so we don't need to care for the module permissions.
                 // because in not every neos version the users have by default the content module or user module
-                window.location.pathname = '/neos'
+                // window.location.pathname = '/neos'
             })
             .catch(function (error) {
                 if (window.Typo3Neos) {
