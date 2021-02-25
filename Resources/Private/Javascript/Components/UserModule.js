@@ -30,7 +30,7 @@ export default class UserModule {
         const userTableActionButtons = Array.from(this._root.querySelectorAll('.neos-table .neos-action'))
         userTableActionButtons.forEach(_actionContainer => {
             const deleteButton = _actionContainer.querySelector('button.neos-button-danger')
-            const showButton = _actionContainer.querySelector('a[href*="administration/users/show"]')
+            const showButton = _actionContainer.querySelector('a[href*="show"]')
             if (isNil(showButton)) {
                 return false
             }

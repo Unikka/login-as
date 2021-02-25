@@ -125,34 +125,8 @@ class ImpersonateController extends ActionController
     public function impersonateWithResponseAction(Account $account)
     {
         $this->impersonateService->impersonate($account);
-        $impersonateStatus = $this->getStatus();
+        $impersonateStatus = $this->getImpersonateStatus();
         return json_encode($impersonateStatus);
-    }
-
-    /**
-     * @return array
-     */
-    protected function getStatus()
-    {
-        $impersonateStatus = [
-            'status' => false
-        ];
-
-        if ($this->impersonateService->isActive()) {
-            $this->response = $this->response->withStatus(200);
-
-            $currentImpersonation = $this->impersonateService->getImpersonation();
-            /** @var User $user */
-            $user = $this->partyService->getAssignedPartyOfAccount($currentImpersonation);
-
-            $impersonateStatus['status'] = true;
-            $impersonateStatus['user'] = [
-                'accountIdentifier' => $currentImpersonation->getAccountIdentifier(),
-                'fullName' => $user->getName()->getFullName()
-            ];
-        }
-
-        return $impersonateStatus;
     }
 
     /**
@@ -164,7 +138,7 @@ class ImpersonateController extends ActionController
         /** @var Account $account */
         $account = $user->getAccounts()->first();
         $this->impersonateService->impersonate($account);
-        $impersonateStatus = $this->getStatus();
+        $impersonateStatus = $this->getImpersonateStatus();
         $this->view->assign('value', $impersonateStatus);
     }
 
@@ -183,7 +157,31 @@ class ImpersonateController extends ActionController
      */
     public function statusAction()
     {
-        $impersonateStatus = $this->getStatus();
+        $impersonateStatus = $this->getImpersonateStatus();
         $this->view->assign('value', $impersonateStatus);
+    }
+
+    /**
+     * @return array
+     */
+    public function getImpersonateStatus()
+    {
+        $impersonateStatus = [
+            'status' => false
+        ];
+
+        if ($this->impersonateService->isActive()) {
+            $currentImpersonation = $this->impersonateService->getImpersonation();
+            /** @var User $user */
+            $user = $this->partyService->getAssignedPartyOfAccount($currentImpersonation);
+
+            $impersonateStatus['status'] = true;
+            $impersonateStatus['user'] = [
+                'accountIdentifier' => $currentImpersonation->getAccountIdentifier(),
+                'fullName' => $user->getName()->getFullName()
+            ];
+        }
+
+        return $impersonateStatus;
     }
 }
