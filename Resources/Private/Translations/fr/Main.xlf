@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file original="" product-name="Unikka.LoginAs" source-language="en" datatype="plaintext">
+    <file original="" product-name="Unikka.LoginAs" source-language="en" target-language="fr" datatype="plaintext">
         <body>
             <trans-unit id="success.impersonateUser" xml:space="preserve" approved="yes">
                 <source>Switched to the new user "{0}".</source>
+                <target>Passé au nouvel utilisateur "{0}".</target>
             </trans-unit>
             <trans-unit id="error.impersonateUser" xml:space="preserve" approved="yes">
                 <source>Could not switch to the selected user.</source>
+                <target>Impossible de basculer vers l'utilisateur sélectionné.</target>
             </trans-unit>
             <trans-unit id="tooltip.impersonateUserButton" xml:space="preserve" approved="yes">
-                <source>Login as user</source>
-            </trans-unit>
-            <trans-unit id="error.restoreUser" xml:space="preserve" approved="yes">
-                <source>Could not switch back to the original user.</source>
-            </trans-unit>
-            <trans-unit id="success.restoreUser" xml:space="preserve" approved="yes">
-                <source>Switched back from {0} to the orginal user {1}.</source>
+                <source>Login as this user</source>
+                <target>Connectez-vous en tant que cet utilisateur</target>
             </trans-unit>
         </body>
     </file>

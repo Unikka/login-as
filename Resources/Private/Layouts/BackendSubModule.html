@@ -1,0 +1,13 @@
+<div class="neos-content neos-container-fluid"  data-csrf-Token="{f:security.csrfToken()}">
+  <script src="{f:uri.resource(package: 'Unikka.LoginAs', path: 'Javascript/Main.js')}"></script>
+
+  <f:render section="subtitle" optional="1" />
+
+	<div class="neos-module-container">
+		<f:render partial="Module/FlashMessages" />
+	</div>
+
+	<f:render section="validationResults" optional="1" />
+
+	<f:render section="content" />
+</div>

@@ -56,7 +56,7 @@ class ImpersonateAspect
             return;
         }
 
-        if ($this->impersonateService->isActive()) {
+        if ($this->impersonateService && $this->impersonateService->isActive()) {
             $impersonation = $this->impersonateService->getImpersonation();
             foreach ($proxy->getSecurityContext()->getAuthenticationTokens() as $token) {
                 $token->setAccount($impersonation);

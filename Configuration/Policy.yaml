@@ -7,10 +7,10 @@ privilegeTargets:
   'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
 
     'Unikka.LoginAs:Impersonate':
-      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->impersonateAction())'
+      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->(?!initialize).*Action())'
 
     'Unikka.LoginAs:RestoreOriginUser':
-      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->restoreAction())'
+      matcher: 'method(Unikka\LoginAs\Controller\ImpersonateController->(restore|restoreWithResponse|status)Action())'
 
 
 roles:
@@ -19,7 +19,7 @@ roles:
       - privilegeTarget: 'Unikka.LoginAs:Impersonate'
         permission: GRANT
 
-  'Neos.Flow:AuthenticatedUser':
+  'Neos.Flow:Everybody':
     privileges:
       - privilegeTarget: 'Unikka.LoginAs:RestoreOriginUser'
         permission: GRANT
