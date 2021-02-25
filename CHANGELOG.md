@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/unikka/login-as/compare/v1.2.1...v1.2.2) (2021-02-25)
+
+
+### Fix
+
+* Uncomment reload action on restore or impersonate of a user ([5270191](https://github.com/unikka/login-as/commit/5270191e73a2f07755083b5c84d65b010384803c))
+
 ## [1.2.1](https://github.com/unikka/login-as/compare/v1.2.0...v1.2.1) (2021-02-25)
 
 
