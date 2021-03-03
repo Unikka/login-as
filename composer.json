@@ -2,7 +2,7 @@
     "description": "Plugin for the Neos CMS that enables users to login with other accounts for support reasons e.g.",
     "type": "neos-plugin",
     "name": "unikka/login-as",
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "require": {
         "neos/flow": "*",
         "neos/neos": "~4.3 || ^5.0 || ^7.0"

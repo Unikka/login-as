@@ -2,7 +2,7 @@
    "name": "neos-login-as",
    "version": "1.2.2",
    "repository": "git@github.com:unikka/login-as.git",
-   "license": "MIT",
+   "license": "GNU GPLv3",
    "dependencies": {
       "core-js": "^3.8.0",
       "regenerator-runtime": "^0.13.7"
