@@ -119,17 +119,6 @@ class ImpersonateController extends ActionController
     }
 
     /**
-     * @param Account $account
-     * @return string
-     */
-    public function impersonateWithResponseAction(Account $account)
-    {
-        $this->impersonateService->impersonate($account);
-        $impersonateStatus = $this->getImpersonateStatus();
-        return json_encode($impersonateStatus);
-    }
-
-    /**
      * @param User $user
      * @return string
      */
