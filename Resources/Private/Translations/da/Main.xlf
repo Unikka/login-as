@@ -26,6 +26,10 @@
                 <source>Back to user "{0}"</source>
                 <target>Tilbage til bruger "{0}"</target>
             </trans-unit>
+            <trans-unit id="title.restoreUserButton" xml:space="preserve" approved="yes">
+                <source>Switch back to the orginal user account</source>
+                <target>Skift tilbage til den oprindelige brugerkonto</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

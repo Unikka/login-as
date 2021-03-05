@@ -20,6 +20,9 @@
             <trans-unit id="label.restoreUserButton" xml:space="preserve" approved="yes">
                 <source>Back to user "{0}"</source>
             </trans-unit>
+            <trans-unit id="title.restoreUserButton" xml:space="preserve" approved="yes">
+                <source>Switch back to the orginal user account</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
