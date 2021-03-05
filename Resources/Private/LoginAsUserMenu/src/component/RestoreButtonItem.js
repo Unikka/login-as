@@ -9,7 +9,6 @@ import buttonTheme from './dropdown.css'
 const BASE_PATH = '/neos/impersonate/'
 
 const restoreUser = (i18nRegistry, addFlashMessage) => {
-    console.log('restore origin user')
     const { csrfToken } = document.getElementById('appContainer').dataset
     new ApiService(BASE_PATH, csrfToken)
         .callRestore()
