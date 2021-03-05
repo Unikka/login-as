@@ -15,7 +15,10 @@
                 <source>Could not switch back to the original user.</source>
             </trans-unit>
             <trans-unit id="success.restoreUser" xml:space="preserve" approved="yes">
-                <source>Switched back from {0} to the orginal user {1}.</source>
+                <source>Switched back from "{0}" to the orginal user "{1}"</source>
+            </trans-unit>
+            <trans-unit id="label.restoreUserButton" xml:space="preserve" approved="yes">
+                <source>Back to user "{0}"</source>
             </trans-unit>
         </body>
     </file>

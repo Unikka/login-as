@@ -14,6 +14,18 @@
                 <source>Login as this user</source>
                 <target>Log ind som denne bruger</target>
             </trans-unit>
+            <trans-unit id="error.restoreUser" xml:space="preserve" approved="yes">
+                <source>Could not switch back to the original user.</source>
+                <target>Kunne ikke skifte tilbage til den oprindelige bruger.</target>
+            </trans-unit>
+            <trans-unit id="success.restoreUser" xml:space="preserve" approved="yes">
+                <source>Switched back from "{0}" to the orginal user "{1}"</source>
+                <target>Skiftet tilbage fra "{0}" til den originale bruger "{1}"</target>
+            </trans-unit>
+            <trans-unit id="label.restoreUserButton" xml:space="preserve" approved="yes">
+                <source>Back to user "{0}"</source>
+                <target>Tilbage til bruger "{0}"</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
