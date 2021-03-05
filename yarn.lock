@@ -1238,6 +1238,14 @@
   resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
   integrity sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==
 
+"@unikka/loginas-api@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@unikka/loginas-api/-/loginas-api-1.0.1.tgz#45669d2642f7fd3e1ef06f8bb2f81410164b4046"
+  integrity sha512-P/MBabF3tC9TIElc4ZQ28bZJbSDSrIJP+Wlyf2pJf71oWXhNlcuoVNezhqRdtrXqoJ9z/nAqUtTCJLypscM5oQ==
+  dependencies:
+    core-js "^3.8.0"
+    regenerator-runtime "^0.13.7"
+
 JSONStream@^1.0.4, JSONStream@^1.3.4, JSONStream@^1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"

@@ -1,13 +1,14 @@
 import {isNil} from '../Helper'
-import ApiService from '../Service/ApiService'
+import ApiService from '@unikka/loginas-api'
 import {ImpersonateButton} from '../Templates/ImpersonateButton'
 
+const BASE_PATH = '/neos/impersonate/'
 export default class UserModule {
     constructor(_root) {
         const csfrTokenField = document.querySelector('[data-csrf-token]')
         this._root = _root
         this._csrfToken = !isNil(csfrTokenField) ? csfrTokenField.getAttribute('data-csrf-token') : ''
-        this._apiService = new ApiService(this._csrfToken)
+        this._apiService = new ApiService(BASE_PATH, this._csrfToken)
 
         if (!isNil(_root)) {
             this._initialize()

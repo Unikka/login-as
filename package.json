@@ -4,6 +4,7 @@
    "repository": "git@github.com:unikka/login-as.git",
    "license": "GNU GPLv3",
    "dependencies": {
+      "@unikka/loginas-api": "^1.0.1",
       "core-js": "^3.8.0",
       "regenerator-runtime": "^0.13.7"
    },
