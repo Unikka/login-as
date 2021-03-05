@@ -1,0 +1,21 @@
+{
+  "description": "LoginAsUserMenu",
+  "license": "GNU GPLv3",
+  "private": true,
+  "scripts": {
+    "build": "neos-react-scripts build",
+    "watch": "neos-react-scripts watch"
+  },
+  "dependencies": {
+    "@unikka/loginas-api": "^1.0.1",
+    "plow-js": "^2.2.0",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@neos-project/neos-ui-extensibility": "^4.0.0",
+    "@neos-project/react-ui-components": "^4.0.0"
+  },
+  "neos": {
+    "buildTargetDirectory": "../../Public/LoginAsUserMenu"
+  }
+}

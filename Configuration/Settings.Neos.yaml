@@ -1,5 +1,13 @@
 Neos:
   Neos:
+    Ui:
+      resources:
+        stylesheets:
+          Unikka.LoginAs:LoginAsUserMenu:
+            resource: resource://Unikka.LoginAs/Public/LoginAsUserMenu/Plugin.css
+        javascript:
+          Unikka.LoginAs:LoginAsUserMenu:
+            resource: resource://Unikka.LoginAs/Public/LoginAsUserMenu/Plugin.js
     userInterface:
       translation:
         autoInclude:
