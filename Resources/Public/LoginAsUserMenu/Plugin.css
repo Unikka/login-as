@@ -1,0 +1,94 @@
+.dropdown__wrapper___2QDVx {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.dropdown__dropDown___x_Kyu {
+    position: static;
+    display: block;
+}
+.dropdown__dropDown__btn___1St5y {
+    position: relative;
+    height: 40px;
+    border: 0;
+    background-color: #222;
+    text-align: right;
+}
+.dropdown__dropDown__btn___1St5y:hover {
+        color: #00ADEE;
+    }
+.dropdown__dropDown__btnIcon___3EvAt {
+    margin-right: 0.5em;
+}
+@media (max-width: 1024px) {
+.dropdown__dropDown__userName___1pE1V {
+        display: none
+}
+    }
+.dropdown__dropDown__contents___B5E1n {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: auto;
+    min-width: 160px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 2px !important;
+    margin-top: -2px;
+    background: #222;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+.dropdown__dropDown__contents___B5E1n {
+        position: absolute;
+        min-width: 240px;
+        top: 40px;
+        left: 0;
+        margin-top: 0
+}
+    }
+.dropdown__dropDown__item___3kntp {
+    height: 40px;
+    border-top: 1px solid #222;
+    background: #141414;
+}
+.dropdown__dropDown__item___3kntp:hover {
+        background: #00ADEE;
+    }
+.dropdown__dropDown__item___3kntp > a {
+        display: block;
+        width: 100%;
+        border: 0;
+        padding: 0 16px;
+        background: 0;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        line-height: 40px;
+        text-align: left;
+    }
+.dropdown__dropDown__item___3kntp button {
+        display: block;
+        width: 100%;
+        border: 0;
+        padding: 0 16px;
+        background: 0;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        line-height: 40px;
+        text-align: left;
+    }
+.dropdown__dropDown__itemIcon___3p3T4 {
+    margin-right: 0.5em;
+}
+.dropdown__dropDown__itemIcon__svg___2KFGR {
+    margin-right: 0.5em;
+    height: 16px;
+    width: 16px;
+    fill: #fff;
+}
+
+
+/*# sourceMappingURL=Plugin.css.map*/

@@ -1,7 +1,8 @@
 import { isNil } from '../Helper'
-import ApiService from '../Service/ApiService'
+import ApiService from '@unikka/loginas-api'
 import { RestoreButton } from '../Templates/RestoreButton'
 
+const BASE_PATH = '/neos/impersonate/'
 export default class UserMenu {
     constructor(_root) {
         const csfrTokenField = document.querySelector('[data-csrf-token]')
@@ -9,7 +10,7 @@ export default class UserMenu {
             ? csfrTokenField.getAttribute('data-csrf-token')
             : ''
         this._root = _root
-        this._apiService = new ApiService(this._csrfToken)
+        this._apiService = new ApiService(BASE_PATH, this._csrfToken)
 
         if (!isNil(_root)) {
             this._checkImpersonateStatus()

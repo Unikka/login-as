@@ -1,0 +1,19 @@
+diff --git a/Neos.Neos/Resources/Private/Templates/Backend/Content/Container.html b/Neos.Neos/Resources/Private/Templates/Backend/Content/Container.html
+index 74d0957eb..49c8a382d 100644
+--- a/Neos.Neos/Resources/Private/Templates/Backend/Content/Container.html
++++ b/Neos.Neos/Resources/Private/Templates/Backend/Content/Container.html
+@@ -1,5 +1,6 @@
+ <!-- TODO: remove this from HTML as it should not be shown in preview mode for example, this causes 'flickering' -->
+-<div id="neos-application" class="neos" role="application">
++<div id="neos-application" class="neos" role="application" data-csrf-Token="{f:security.csrfToken()}">
++  <script src="{f:uri.resource(package: 'Unikka.LoginAs', path: 'Javascript/Main.js')}"></script>
+ 	<div id="neos-top-bar">
+ 		<div id="neos-top-bar-right">
+ 			<div id="neos-user-actions">
+@@ -8,4 +9,4 @@
+ 		</div>
+ 	</div>
+ 	<f:render partial="Backend/Menu" arguments="{_all}" />
+-</div>
+\ No newline at end of file
++</div>
