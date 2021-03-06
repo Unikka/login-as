@@ -1,3 +1,36 @@
+# [2.0.0](https://github.com/unikka/login-as/compare/v1.2.2...v2.0.0) (2021-03-06)
+
+
+### Breaking
+
+* Change license from MIT to GPL-3.0 ([c3c5658](https://github.com/unikka/login-as/commit/c3c5658d9fbb31c293eac912d8102cb014dc7cea))
+
+### Build
+
+* Add compiled assets ([6334212](https://github.com/unikka/login-as/commit/63342122c058d11c6bfdd61b89c09a73226d2faa))
+* Add react-ui plugin node_modules to the git ignore list ([d61c693](https://github.com/unikka/login-as/commit/d61c6935022847611455deea1e844726df937c40))
+
+### Docs
+
+* Document the new features of the package ([5757eab](https://github.com/unikka/login-as/commit/5757eabb775fcd5a75940e3ba9661f80e1829033))
+
+### Fix
+
+* Remove console.log ([98a14ce](https://github.com/unikka/login-as/commit/98a14ce5de48c9fd05c772b4b8b556537edb0d11))
+* Remove unused action impersonateWithResponse ([f68b571](https://github.com/unikka/login-as/commit/f68b5717a09d814387df7d6a80e1ca968b467c44))
+
+### New
+
+* Add neos 7 as compatible version ([5def263](https://github.com/unikka/login-as/commit/5def263ac2b184ea35c2eda5b1b19cc08148dc4e))
+* Add new react-ui extension for the user menu ([a4abda0](https://github.com/unikka/login-as/commit/a4abda09acfaa73c0e4883f24677c6623624ab68))
+* Add restore button label and some translations ([1dfeb5b](https://github.com/unikka/login-as/commit/1dfeb5b6de92ccbeda1c1c1c0919a196afd36e2c))
+* Add restore button title translations ([40e1ca5](https://github.com/unikka/login-as/commit/40e1ca5b1de16560449038fdc4abf755a6a264b6))
+* Extract API service to own package ([0c44d3f](https://github.com/unikka/login-as/commit/0c44d3ffffc85c97631ee89a4ea8f0fed1250d03))
+
+### Upgrade
+
+* Update @unikka/loginas-api to version 1.1.0 ([1bd425d](https://github.com/unikka/login-as/commit/1bd425d9807debcec8e8b8a9f2f8bf56e7737ec5))
+
 ## [1.2.2](https://github.com/unikka/login-as/compare/v1.2.1...v1.2.2) (2021-02-25)
 
 
