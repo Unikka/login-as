@@ -1238,10 +1238,10 @@
   resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
   integrity sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==
 
-"@unikka/loginas-api@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@unikka/loginas-api/-/loginas-api-1.0.1.tgz#45669d2642f7fd3e1ef06f8bb2f81410164b4046"
-  integrity sha512-P/MBabF3tC9TIElc4ZQ28bZJbSDSrIJP+Wlyf2pJf71oWXhNlcuoVNezhqRdtrXqoJ9z/nAqUtTCJLypscM5oQ==
+"@unikka/loginas-api@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@unikka/loginas-api/-/loginas-api-1.1.0.tgz#6225789cef72689510a2f3998702eeb4b570f6a2"
+  integrity sha512-1aMx9bkt82AxBu34uvjfSSv6Ka01TPHENqKAAv+BWccAKGBjyYGeVGEzP/cgls1lRFTbG7gvMjED8bGfXjCfJg==
   dependencies:
     core-js "^3.8.0"
     regenerator-runtime "^0.13.7"

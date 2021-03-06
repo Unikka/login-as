@@ -7,7 +7,7 @@
     "watch": "neos-react-scripts watch"
   },
   "dependencies": {
-    "@unikka/loginas-api": "^1.0.1",
+    "@unikka/loginas-api": "^1.1.0",
     "plow-js": "^2.2.0",
     "prop-types": "^15.7.2"
   },
