@@ -1,5 +1,6 @@
 {
     "branch": "release",
+    "branches": ["master", "/release-.*/"],
     "analyzeCommits": {
         "preset": "eslint",
         "releaseRules": [
