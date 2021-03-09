@@ -1,3 +1,17 @@
+## [2.0.2](https://github.com/unikka/login-as/compare/v2.0.1...v2.0.2) (2021-03-09)
+
+
+### Build
+
+* Adjust branches for semantic release ([8b79f47](https://github.com/unikka/login-as/commit/8b79f4763d4aae4d65e59c6478e1fe80bf204600))
+* Adjust regex for release branch ([bb30d5d](https://github.com/unikka/login-as/commit/bb30d5db36f67a278c55ff998fa1e04181d8568f))
+* Release 1.2.3 [skip ci] ([f0bda74](https://github.com/unikka/login-as/commit/f0bda74a33fb612bf876a1efc813f9b0f904168b))
+
+### Fix
+
+* Adjust user menu for larger content ([770905b](https://github.com/unikka/login-as/commit/770905b7829d4fcd7f6b9bdf572f7072977e7bb6))
+* Fix drop down alignment also for old content module ([1bfb1cc](https://github.com/unikka/login-as/commit/1bfb1cc3618b8780ecdb9bc1c681b0b09b6acad9))
+
 ## [2.0.1](https://github.com/unikka/login-as/compare/v2.0.0...v2.0.1) (2021-03-09)
 
 
