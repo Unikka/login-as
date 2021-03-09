@@ -1,0 +1,9 @@
+.neos .neos-dropdown-menu {
+    left: auto !important;
+    min-width: 100% !important;
+}
+
+/* Change right alingment for emberjs based content module */
+.neos-backend #neos-top-bar #neos-publish-menu .neos-dropdown-menu {
+    right: initial;
+}
