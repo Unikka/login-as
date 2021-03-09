@@ -1,3 +1,14 @@
+## [2.0.1](https://github.com/unikka/login-as/compare/v2.0.0...v2.0.1) (2021-03-09)
+
+
+### Build
+
+* Add CodeQL test ([186f0fe](https://github.com/unikka/login-as/commit/186f0fe1ffae0769f6161b30509f548a8d7fb37f))
+
+### Fix
+
+* Limit LayoutPath override to packages of Neos/Neos ([c75c93b](https://github.com/unikka/login-as/commit/c75c93b23b3c1ad320b7ae49a7bda7fed7fd2a68)), closes [#9](https://github.com/unikka/login-as/issues/9)
+
 # [2.0.0](https://github.com/unikka/login-as/compare/v1.2.2...v2.0.0) (2021-03-06)
 
 
