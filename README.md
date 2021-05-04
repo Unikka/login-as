@@ -13,7 +13,7 @@ With this Neoscms package it is possible to change the identity of the logged in
 
 With this package you can extend your neos so that you can simply log in as this user. Completely without resetting passwords.
 
-![Switch users](https://user-images.githubusercontent.com/1014126/110188723-04866500-7e1d-11eb-9833-0e51523dcb69.gif)
+[![Introduction Video](http://img.youtube.com/vi/_wV3OCYOqPs/0.jpg)](http://www.youtube.com/watch?v=_wV3OCYOqPs "UNIKKA LoginAs")
 
 
 ## Thanks :heart:
