@@ -1,8 +1,8 @@
 import { isNil } from '../Helper'
-import ApiService from '@unikka/loginas-api'
+import ApiService from "@unikka/loginas-api/src/Service/ApiService";
 import { RestoreButton } from '../Templates/RestoreButton'
 
-const BASE_PATH = '/neos/impersonate/'
+const BASE_PATH = location.href.split('/neos')[0] + '/neos/impersonate/'
 export default class UserMenu {
     constructor(_root) {
         const csfrTokenField = document.querySelector('[data-csrf-token]')
