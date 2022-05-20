@@ -26,6 +26,9 @@
       "prettier": "^2.2.1",
       "semantic-release": "^17.0.8"
    },
+   "engines": {
+      "node": "14"
+   },
    "browserslist": "> 0.25%, not dead",
    "config": {
       "commitizen": {
