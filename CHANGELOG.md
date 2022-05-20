@@ -1,3 +1,29 @@
+## [2.0.3](https://github.com/unikka/login-as/compare/v2.0.2...v2.0.3) (2022-05-20)
+
+
+### Build
+
+* Adds GitHub action workflow for release ([da6b148](https://github.com/unikka/login-as/commit/da6b148e98343afa476a557f21cc892ce185338e))
+* Pin nodejs engine to version 14 ([f9ae934](https://github.com/unikka/login-as/commit/f9ae93453c475fed263bc0e50516e65e3b6a53ab))
+* Remove CircleCI configuration ([f1c6b35](https://github.com/unikka/login-as/commit/f1c6b35c3b3e5149499c6c51e66afc86e49f5267))
+* Update circleci image to node 14 ([e972b8e](https://github.com/unikka/login-as/commit/e972b8e35db219299dd48ae806f2cce67d0a8abd))
+
+### Docs
+
+* Add notice for Neos 8.0 ([90a17e8](https://github.com/unikka/login-as/commit/90a17e8d5707961774cdd9aeda99b11247a68c50))
+* Add YouTube introduction ([8845575](https://github.com/unikka/login-as/commit/88455758d924fe93c5704eedc285dd3380becec7))
+
+### Fix
+
+* Exclude package from workspace module ([eec52e1](https://github.com/unikka/login-as/commit/eec52e19f9373c5885be7f04f7be32fc8ca3755a))
+* Prevent session errors ([c785adc](https://github.com/unikka/login-as/commit/c785adcaeacf17fe03f91d99b2bacbb9e88a3476))
+* Recompile assets to remove map link ([d4ab9d0](https://github.com/unikka/login-as/commit/d4ab9d097633104f0e92d87664b5441e86b8ca11))
+
+### Upgrade
+
+* Upgrade @unikka/loginas-api to version 1.1.1 ([8054028](https://github.com/unikka/login-as/commit/8054028867b6a85c4d3e2513f5a4064b7df57ff8))
+* Upgrade to parcel 2 ([40c7352](https://github.com/unikka/login-as/commit/40c7352a6502983ca126bda03368e9907718a558))
+
 ## [2.0.2](https://github.com/unikka/login-as/compare/v2.0.1...v2.0.2) (2021-03-09)
 
 
