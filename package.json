@@ -12,8 +12,8 @@
       "test": "echo \"Error: no test specified\" && exit 0",
       "semantic-release": "semantic-release",
       "commit": "git-cz",
-      "build": "parcel build Resources/Private/Javascript/Main.js --out-dir Resources/Public/Javascript/",
-      "watch": "parcel watch Resources/Private/Javascript/Main.js --out-dir Resources/Public/Javascript/"
+      "build": "parcel build Resources/Private/Javascript/Main.js --dist-dir Resources/Public/Javascript/",
+      "watch": "parcel watch Resources/Private/Javascript/Main.js --dist-dir Resources/Public/Javascript/"
    },
    "devDependencies": {
       "@semantic-release/changelog": "^5.0.1",
@@ -22,10 +22,11 @@
       "commitizen": "^4.1.2",
       "conventional-changelog-eslint": "^3.0.8",
       "cz-adapter-eslint": "^0.3.0",
-      "parcel-bundler": "^1.12.4",
+      "parcel": "^2.5.0",
       "prettier": "^2.2.1",
       "semantic-release": "^17.0.8"
    },
+   "browserslist": "> 0.25%, not dead",
    "config": {
       "commitizen": {
          "path": "./node_modules/cz-adapter-eslint"
