@@ -169,7 +169,7 @@ class ImpersonateService
      * @param string $key
      * @throws SessionNotStartedException
      */
-    protected function getSessionData(string $key): mixed
+    protected function getSessionData(string $key): ?mixed
     {
         return $this->session->isStarted() && $this->session->hasKey($key) ? $this->session->getData($key) : null;
     }
