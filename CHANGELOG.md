@@ -1,3 +1,10 @@
+# [3.0.0](https://github.com/unikka/login-as/compare/v2.0.3...v3.0.0) (2022-07-29)
+
+
+### Update
+
+* Remove EmberJS based UI Patch ([0829e2e](https://github.com/unikka/login-as/commit/0829e2ed9f0500a7f600f5e0c35efe0f3091d5ed))
+
 ## [2.0.3](https://github.com/unikka/login-as/compare/v2.0.2...v2.0.3) (2022-05-20)
 
 
