@@ -1,5 +1,5 @@
 -
-  requestFilter: 'isPackage("Neos.Neos") && parentRequest.isController("Backend\Module") && isFormat("html") && !isPackage("Neos.Media.Browser") && !isController("Module\Management\History")'
+  requestFilter: 'isPackage("Neos.Neos") && parentRequest.isController("Backend\Module") && isFormat("html") && !isPackage("Neos.Media.Browser") && !isController("Module\Management\Workspaces") && !isController("Module\Management\History")'
   options:
     layoutRootPaths:
       'Unikka.LoginAs': 'resource://Unikka.LoginAs/Private/Layouts'

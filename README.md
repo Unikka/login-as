@@ -7,6 +7,9 @@
 [![Packagist](https://img.shields.io/packagist/v/unikka/login-as.svg?style=flat-square)](https://packagist.org/packages/unikka/login-as)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
+# Important
+With Neos 8.0 this package became part of the core. So just use it with Neos 7.3 or below.
+
 # LoginAs package 
 
 With this Neoscms package it is possible to change the identity of the logged in user. It has certainly happened that an editor has called you and described an error that they themselves can not understand.
@@ -141,16 +144,6 @@ Unikka:
 
 This does not work for the other options yet!
 
-## Troubleshooting
-
-If you are still using the EmberJS based Neos Ui, the content module is currently not automatically extended with the new button. If you log in as an editor who only has permissions for the content module, you can only get back to your user by logging out and logging in again.
-
-We provide in the package a patch file to adjust the template of `Neos/Neos` so that you also get this button rendered.
-
-This patch could be installed automatically using the package `cweagans/composer-patches`.
-For more information visit [usage of composer-patches](https://github.com/cweagans/composer-patches#usage)
-
-You can find the patch for the EmberJS based UI in at `Patches/adjustContentModuleMarkupForLoginAs.patch`
 ## Contribution
 
 We'd love you to contribute to LoginAs. We try to make it as easy as possible.

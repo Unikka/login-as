@@ -1,4 +1,4 @@
-.cache
+.parcel-cache
 /node_modules
 /Resources/Public/Javascript/
 /Resources/Private/LoginAsUserMenu/node_modules
