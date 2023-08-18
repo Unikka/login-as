@@ -1,6 +1,6 @@
 {
    "name": "neos-login-as",
-   "version": "3.0.0",
+   "version": "3.0.2",
    "repository": "git@github.com:unikka/login-as.git",
    "license": "GNU GPLv3",
    "dependencies": {

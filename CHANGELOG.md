@@ -1,3 +1,19 @@
+## [3.0.2](https://github.com/unikka/login-as/compare/v3.0.1...v3.0.2) (2023-08-18)
+
+
+### Build
+
+* Adjust node version in github action ([21abb89](https://github.com/unikka/login-as/commit/21abb8900fbbda610d57940e6ef3b3a33f5ac60c))
+
+### Fix
+
+* Prevent using localization API before initialization ([ee96c92](https://github.com/unikka/login-as/commit/ee96c92cdbd5182c1aff8d9862b1a03f61499f6b)), closes [#26](https://github.com/unikka/login-as/issues/26)
+* Render the tooltip of impersonate button ([822131e](https://github.com/unikka/login-as/commit/822131ecf8f1ab7610a577667237df06eecefd01)), closes [#25](https://github.com/unikka/login-as/issues/25)
+
+### Upgrade
+
+* Use node 16 and adjust some packages ([154ecce](https://github.com/unikka/login-as/commit/154eccee59033255465a8e4730f926315b0126fd))
+
 # [3.0.0](https://github.com/unikka/login-as/compare/v2.0.3...v3.0.0) (2022-07-29)
 
 
